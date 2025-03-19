@@ -4,16 +4,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahajabin Akter Ritu-Portfolio</title>
+    <title>Mahajabin Akter Ritu Portfolio</title>
 
-    <!---------- Daisy UI Link ----------->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-------- Boxicons -------->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!------------ Daisy UI ----------->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet">
+
 </head>
 
-<body>
-    <!------------ JS File --------->
-    <script src="script.js"></script>
+<body class="bg-black text-white">
+    <!----------- Home Section ----------->
+    <!-----------Navbar Section ---------->
+    <header class="w-full bg-black shadow-md fixed top-0 z-50">
+        <nav class="navbar px-6 lg:px-16">
+            <!-- Logo -->
+            <div class="flex-1">
+                <a class="text-2xl font-bold text-white">Ritu.</a>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <ul class="hidden lg:flex gap-6 text-lg">
+                <li><a href="#about" class="hover:text-blue-400">About</a></li>
+                <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+                <li><a href="#resume" class="hover:text-blue-400">Resume</a></li>
+                <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+                <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+            </ul>
+
+            <!-- Hamburger Menu (Mobile) -->
+            <div class="lg:hidden">
+                <button class="btn btn-ghost text-white" onclick="toggleMenu()">
+                    <i class='bx bx-menu text-3xl'></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden flex flex-col items-center bg-gray-800 text-white w-full py-4">
+            <a href="#about" class="py-2 hover:text-blue-400" onclick="toggleMenu()">About</a>
+            <a href="#services" class="py-2 hover:text-blue-400" onclick="toggleMenu()">Services</a>
+            <a href="#resume" class="py-2 hover:text-blue-400" onclick="toggleMenu()">Resume</a>
+            <a href="#projects" class="py-2 hover:text-blue-400" onclick="toggleMenu()">Projects</a>
+            <a href="#contact" class="py-2 hover:text-blue-400" onclick="toggleMenu()">Contact</a>
+        </div>
+    </header>
+
+    <!----------- Hero section ------------>
+    <section class="hero min-h-screen flex flex-col items-center justify-center text-center px-6">
+        <div class="container">
+            <h1 class="text-4xl md:text-5xl font-bold">Mahajabin Akter Ritu</h1>
+            <p class="text-xl md:text-3xl mt-4">
+                I'm a <span id="changing-text" class="text-blue-400"></span><span class="cursor text-white">|</span>
+            </p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex gap-6 mt-6">
+            <a href="https://www.facebook.com/profile.php?id=100075475152520" class="text-3xl hover:text-blue-400">
+                <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="https://x.com/Mahajabin_Ritu" class="text-3xl hover:text-blue-400">
+                <i class='bx bxl-twitter'></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mahajabin-akter-ritu-0366432b3/" class="text-3xl hover:text-blue-400">
+                <i class='bx bxl-linkedin-square'></i>
+            </a>
+            <a href="https://github.com/Mahajabin217" class="text-3xl hover:text-blue-400">
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+    </section>
+
+    <!------------- About Section ------------>
+    <section id="about" class="container mx-auto p-6">
+        <div class="flex flex-col lg:flex-row items-center">
+            <!-- Left Side: Profile Image -->
+            <div class="flex justify-center mb-6 lg:mb-0 lg:w-1/2">
+                <img src="images/bg_pic.jpeg" alt="Your Name"
+                    class="rounded-lg shadow-lg w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
+            </div>
+
+            <!-- Right Side: About Text -->
+            <div class="lg:w-2/3 lg:pl-8">
+                <div class="about-navbar mb-4 text-center lg:text-left">
+                    <p class="subheading text-white">Get to know me</p>
+                    <h2 class="text-3xl font-bold text-blue-400">About Me</h2>
+                    <p class="text-gray-500">_______</p>
+                </div>
+
+                <div class="about-body text-left lg:text-left">
+                    <h3 class="text-xl font-semibold mt-6 text-blue-400">Who am I?</h3>
+                    <h1 class="text-3xl font-bold mt-3 text-white">I'm Mahajabin Akter Ritu, A Frontend Developer &
+                        Aspiring Software Engineer</h1>
+                    <p class="intro mt-4 text-gray-300">
+                        I'm a passionate Frontend Developer, creating interactive and user-friendly web experiences.
+                        I love turning ideas into meaningful digital solutions while staying up-to-date with the latest
+                        trends.
+                        With a keen eye for detail, I prioritize tasks, iterate fast, and deliver high-quality results.
+                    </p>
+
+                    <p class="my-6 text-gray-500">
+                        _____________________________________________________________________________________</p>
+
+                    <!-- Short Details -->
+                    <div class="about-info text-gray-300">
+                        <p><strong>Name:</strong> Mahajabin Akter Ritu</p>
+                        <p><strong>Email:</strong> mahajabin.ritu98@gmail.com</p>
+                        <p><strong>From:</strong> Dhaka, Bangladesh</p>
+                    </div>
+
+                    <a href="https://drive.google.com/file/d/1Erz14E2wFALRkcLxUPqQb2htpa6C7tPm/view?usp=drive_link" class="btn btn-info mt-6 text-white px-6 py-3 rounded">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------- Services Section ------------->
+    <section id="services" class="py-12">
+        <div class="container mx-auto text-center">
+            <p class="section-subtitle text-white">Services I offer to my clients</p>
+            <h2 class="section-title text-3xl font-bold mb-6 text-blue-400">My Services</h2>
+            <p class="text-gray-500">_________</p>
+
+            <!-- Service Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+
+                <!-- Frontend Development -->
+                <div
+                    class="service-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="bx bx-code text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-4">Frontend Development</h3>
+                    <p class="text-gray-300">I create responsive, user-friendly websites with modern technologies.</p>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div
+                    class="service-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="bx bx-paint text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-4">UI/UX Design</h3>
+                    <p class="text-gray-300">I design visually appealing and functional user interfaces.</p>
+                </div>
+
+                <!-- Website Optimization -->
+                <div
+                    class="service-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="bx bx-user text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-4">Website Optimization</h3>
+                    <p class="text-gray-300">Boosting website speed, SEO, and performance for better user experience.
+                    </p>
+                </div>
+
+                <!-- E-Commerce Websites -->
+                <div
+                    class="service-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="bx bx-shopping-bag text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-4">E-Commerce Websites</h3>
+                    <p class="text-gray-300">Developing online stores with seamless user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------- Resume Section -------------->
+    <section id="resume" class="py-12">
+        <div class="container mx-auto text-center">
+            <p class="section-subtitle text-white">Check out my resume</p>
+            <h2 class="section-title text-3xl font-bold mb-6 text-blue-400">Resume</h2>
+            <p class="text-gray-500">_________</p>
+
+            <!-- Resume Section: Education and Experience Side by Side -->
+            <div class="flex flex-col lg:flex-row gap-12 mt-8 text-left">
+
+                <!-- Education Section -->
+                <div class="resume-section lg:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-blue-400">Education</h2>
+                    <div class="grid grid-cols-1 gap-6">
+
+                        <!-- Education 1 -->
+                        <div
+                            class="timeline-box bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-48">
+                            <div class="content">
+                                <h3 class="text-xl font-semibold text-white">B.Sc in Computer Science And Engineering
+                                </h3>
+                                <p class="text-gray-300">Dhaka Mohanagar Mohila College / 2018 - 2022</p>
+                                <p class="text-gray-300">Studied fundamental and advanced topics in computer science,
+                                    including programming, data structures, and software development.</p>
+                            </div>
+                        </div>
+
+                        <!-- Education 2 -->
+                        <div
+                            class="timeline-box bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-48">
+                            <div class="content">
+                                <h3 class="text-xl font-semibold text-white">HSC (Higher Secondary School Certificate)
+                                </h3>
+                                <p class="text-gray-300">Dhaka Mohanagar Mohila College / 2016 - 2018</p>
+                                <p class="text-gray-300">Completed Higher Secondary Education in the Science stream with
+                                    a focus on Mathematics, Physics, and Computer Science.</p>
+                            </div>
+                        </div>
+
+                        <!-- Education 3 -->
+                        <div
+                            class="timeline-box bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-48">
+                            <div class="content">
+                                <h3 class="text-xl font-semibold text-white">SSC (Secondary School Certificate)</h3>
+                                <p class="text-gray-300">Shre-E Bangla Balika Mahaviddaloy / 2016</p>
+                                <p class="text-gray-300">Completed SSC in the Science stream with a focus on
+                                    Mathematics, Physics, and Computer Science.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="resume-section lg:w-1/2 text-left">
+                    <h2 class="text-3xl font-bold mb-4 text-blue-400">Experience</h2>
+                    <div class="grid grid-cols-1 gap-6">
+
+                        <!-- Experience 1 -->
+                        <div
+                            class="timeline-box bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-48">
+                            <div class="content">
+                                <h3 class="text-xl font-semibold text-white">Frontend Developer Intern</h3>
+                                <p class="text-gray-300">CodeAlpha / March 2025 - Present</p>
+                                <p class="text-gray-300">Working on frontend development projects using HTML, CSS,
+                                    JavaScript.</p>
+                            </div>
+                        </div>
+
+                        <!-- Experience 2 -->
+                        <div
+                            class="timeline-box bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-48">
+                            <div class="content">
+                                <h3 class="text-xl font-semibold text-white">Presentation & Public Speaking
+                                    Certification</h3>
+                                <p class="text-gray-300">10 Minute School / 2024</p>
+                                <p class="text-gray-300">Completed a course on effective communication and presentation
+                                    skills.</p>
+                            </div>
+                        </div>
+
+                        <!-- Experience 3 -->
+                        <div
+                            class="timeline-box bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-48">
+                            <div class="content">
+                                <h3 class="text-xl font-semibold text-white">Fundamental of CSE and Software Development
+                                    Course (Ongoing)</h3>
+                                <p class="text-gray-300">Phitron / 2023 - Present</p>
+                                <p class="text-gray-300">Learning advanced programming concepts, Data structures,
+                                    Algorithms, OOP, Database, and web development. Gaining hands-on experience with
+                                    real-world projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------- Skill Part ---------->
+    <section id="skills" class="py-12 bg-black text-white">
+        <div class="container mx-auto text-left">
+            <p class="section-subtitle text-white">My level of knowledge in some tools</p>
+            <h2 class="section-title text-3xl font-bold mb-6 text-blue-400">My Skills</h2>
+
+            <!-- Skills List -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Skill 1: HTML/CSS -->
+                <div class="skill p-4 bg-gray-800 rounded-lg shadow-lg">
+                    <div class="skill-name flex justify-between mb-4">
+                        <span>HTML/CSS</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar w-full bg-gray-700 rounded-full h-2">
+                        <div class="progress bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 2: JavaScript -->
+                <div class="skill p-4 bg-gray-800 rounded-lg shadow-lg">
+                    <div class="skill-name flex justify-between mb-4">
+                        <span>JavaScript</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="progress-bar w-full bg-gray-700 rounded-full h-2">
+                        <div class="progress bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 3: Web Design -->
+                <div class="skill p-4 bg-gray-800 rounded-lg shadow-lg">
+                    <div class="skill-name flex justify-between mb-4">
+                        <span>Web Design</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="progress-bar w-full bg-gray-700 rounded-full h-2">
+                        <div class="progress bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 4: React JS -->
+                <div class="skill p-4 bg-gray-800 rounded-lg shadow-lg">
+                    <div class="skill-name flex justify-between mb-4">
+                        <span>React JS</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar w-full bg-gray-700 rounded-full h-2">
+                        <div class="progress bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 5: Express.js -->
+                <div class="skill p-4 bg-gray-800 rounded-lg shadow-lg">
+                    <div class="skill-name flex justify-between mb-4">
+                        <span>Express.js</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-bar w-full bg-gray-700 rounded-full h-2">
+                        <div class="progress bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------- Projects Section -------------->
+    <section id="projects" class="py-12 bg-black text-white">
+        <div class="container mx-auto text-center">
+            <p class="section-subtitle text-white">Showcasing some of my best work</p>
+            <h2 class="section-title text-3xl font-bold mb-6 text-blue-400">Projects</h2>
+            <p>________</p>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+
+                <!-- Project 1 -->
+                <div class="project-card bg-gray-800 rounded-lg shadow-lg">
+                    <img src="images/project_1.jpeg" alt="Project 1" class="w-full rounded-t-lg">
+                    <div class="project-title p-4 text-xl font-semibold">Alpha Clash Game</div>
+                    <div class="project-description p-4 text-sm text-gray-400">A typing game built with HTML, Tailwind
+                        CSS, and JavaScript.</div>
+                    <div class="project-links flex justify-between p-4">
+                        <a href="https://prismatic-semolina-a92cf5.netlify.app/" target="_blank"
+                            class="text-blue-400 hover:underline">Live Demo</a>
+                        <a href="https://github.com/yourgithub/alpha-clash-game" target="_blank"
+                            class="text-blue-400 hover:underline">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-gray-800 rounded-lg shadow-lg">
+                    <img src="images/project_2.jpeg" alt="Project 2" class="w-full rounded-t-lg">
+                    <div class="project-title p-4 text-xl font-semibold">Number Guessing Game</div>
+                    <div class="project-description p-4 text-sm text-gray-400">A number guessing game built using HTML,
+                        Tailwind CSS & JavaScript.</div>
+                    <div class="project-links flex justify-between p-4">
+                        <a href="https://lnkd.in/gj5qBE3v" target="_blank" class="text-blue-400 hover:underline">Live
+                            Demo</a>
+                        <a href="https://lnkd.in/gDDHma4p" target="_blank"
+                            class="text-blue-400 hover:underline">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------ Contact Section ------------>
+    <section id="contact" class="bg-black text-white py-12">
+        <div class="container mx-auto text-center">
+            <p class="section-subtitle text-white">Feel free to contact me anytime</p>
+            <h2 class="section-title text-3xl font-bold mb-6 text-blue-400">Get in Touch</h2>
+            <p>___________</p>
+
+            <div class="contact-container grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <!-- Contact Form -->
+                <div class="form bg-black p-8 rounded-lg shadow-lg">
+                    <h2 class="text-xl font-semibold mb-6 text-left text-blue-400">Message Me</h2>
+                    <form id="contact-form" class="space-y-4">
+                        <input type="text" id="name" placeholder="Your Name" class="input input-bordered w-full"
+                            required>
+                        <input type="email" id="email" placeholder="Your Email" class="input input-bordered w-full"
+                            required>
+                        <textarea id="message" placeholder="Your Message" class="textarea textarea-bordered w-full"
+                            required></textarea>
+                        <button type="submit" class="btn btn-info w-full">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info bg-black p-8 rounded-lg shadow-lg text-left">
+                    <h2 class="text-xl font-semibold mb-6 text-blue-400">Contact Info</h2>
+                    <p class="text-gray-400">Always available for freelance work if the right project comes along, Feel
+                        free to contact me!</p> <br>
+                    <p class="text-white">Name:</p>
+                    <p class="text-gray-400">Mahajabin Akter Ritu</p>
+                    <p class="text-white">Location:</p>
+                    <p class="text-gray-400">Wari,Dhaka,Bangladesh</p>
+                    <p class="text-white">Email Me:</p>
+                    <p class="text-gray-400">mahajabin.ritu98@gmail.com</p>
+                    <p class="text-white">Call Me:</p>
+                    <p class="text-gray-400">+8801632942393</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--------------Js File ------------>
+    <script src="portfolio.js"></script>
 </body>
 
 </html>
